@@ -8,7 +8,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello() {
-        System.err.println("Hello Spring MVC");
+        System.err.println("Hello Spring MVCjjj");
         return "success";
     }
 
