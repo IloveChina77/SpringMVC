@@ -14,9 +14,35 @@
   <url>http://www.example.com</url>
 
   <properties>
+    <!-- 指定jdk版本 -->
     <maven.compiler.release>12.0.2</maven.compiler.release>
+    <!-- 指定spring全家桶版本 -->
+    <spring.family.version>5.2.1.RELEASE</spring.family.version>
   </properties>
-
+  <dependencyManagement>
+    <!--  用来管理依赖的版本 -->
+    <dependencies>
+      <!-- spring-context  -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.family.version}</version>
+      </dependency>
+      <!-- spring mvc -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.family.version}</version>
+      </dependency>
+      <!-- lombok -->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.10</version>
+<!--        <scope>provided</scope>-->
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -25,17 +51,21 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+    <!-- spring-context  -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>5.2.1.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+    <!-- spring mvc -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>5.2.1.RELEASE</version>
+    </dependency>
+    <!-- lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
     </dependency>
 
   </dependencies>
