@@ -9,7 +9,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello() {
-        System.err.println("Hello Spring MVCjjj");
+        System.err.println("Hello Spring MVC");
         return "success";
     }
 
