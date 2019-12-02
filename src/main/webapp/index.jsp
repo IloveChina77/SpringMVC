@@ -12,5 +12,11 @@
 </head>
 <body>
 <a href="hello">点击999</a>
+<form action="/hello" method="post">
+    用户名:<input type="text" name="username"/><br/>
+    昵称： <input type="text" name="password" /><br/>
+<%--    生日： <input type="text" name="date">--%>
+    <input type="submit" value="提交"/>
+</form>
 </body>
 </html>
