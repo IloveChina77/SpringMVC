@@ -16,9 +16,13 @@
   <properties>
     <!-- 指定jdk版本 -->
     <maven.compiler.release>12.0.2</maven.compiler.release>
+<!--    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>-->
     <!-- 指定spring全家桶版本 -->
     <spring.family.version>5.2.1.RELEASE</spring.family.version>
+    <servlet.version>4.0.1</servlet.version>
   </properties>
+
   <dependencyManagement>
     <!--  用来管理依赖的版本 -->
     <dependencies>
@@ -39,10 +43,11 @@
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <version>1.18.10</version>
-<!--        <scope>provided</scope>-->
+       <!-- <scope>provided</scope>-->
       </dependency>
     </dependencies>
   </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -50,7 +55,6 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-
     <!-- spring-context  -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -65,8 +69,29 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+    </dependency>
+    <!-- servletAPI-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${servlet.version}</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- 文件上传用的俩依赖，io 和 fileUpload -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.6</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.4</version>
+    </dependency>
+
+
+
 
   </dependencies>
 

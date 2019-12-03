@@ -39,6 +39,10 @@
 <a href="testGetSessionAttributions">获取属性</a>
 <a href="testDelSessionAttributions">删除属性</a>
 
+<form enctype="multipart/form-data" method="post" action="/uploadFile">
+    文件上传：<input name="file" type="file"/>
+    <input type="submit" value="提交" />
+</form>
 
 </body>
 </html>
