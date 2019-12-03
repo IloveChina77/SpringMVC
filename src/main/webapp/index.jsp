@@ -44,5 +44,8 @@
     <input type="submit" value="提交" />
 </form>
 
+<%--  测试异常处理   --%>
+<a href="exceptions">异常处理</a>
+
 </body>
 </html>
