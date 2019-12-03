@@ -18,7 +18,7 @@ public class SysExceptionResolver implements HandlerExceptionResolver {
         if(ex instanceof SysException) {
             s = (SysException)ex;
         } else {
-            s = new SysException("系统维护~~~");
+            s = new SysException("系统维护~~~~");
         }
         // 创建moduleAndView
         ModelAndView mv = new ModelAndView();
