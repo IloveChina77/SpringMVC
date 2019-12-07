@@ -10,14 +10,14 @@
   <packaging>war</packaging>
 
   <name>springMVC Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <!-- 指定jdk版本 -->
     <maven.compiler.release>12.0.2</maven.compiler.release>
-<!--    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>-->
+<!--
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+-->
     <!-- 指定spring全家桶版本 -->
     <spring.family.version>5.2.1.RELEASE</spring.family.version>
     <servlet.version>4.0.1</servlet.version>
@@ -43,18 +43,19 @@
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <version>1.18.10</version>
-       <!-- <scope>provided</scope>-->
       </dependency>
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
     <!-- spring-context  -->
     <dependency>
       <groupId>org.springframework</groupId>
