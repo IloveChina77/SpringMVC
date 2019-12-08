@@ -13,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 public class SysExceptionResolver implements HandlerExceptionResolver {
 
     @Override
-    public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
+    public ModelAndView
+    resolveException
+    (HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
         SysException s = null;
         if(ex instanceof SysException) {
             s = (SysException)ex;
@@ -23,7 +25,7 @@ public class SysExceptionResolver implements HandlerExceptionResolver {
         // 创建moduleAndView
         ModelAndView mv = new ModelAndView();
         // 向moduleAndView 放数据（最后还是放到request域中去）
-        mv.addObject("errorMsg",s.getMsg());
+        mv.addObject("errorMsg", s.getMsg());
         // 设置跳转页面
         mv.setViewName("error");
         return mv;

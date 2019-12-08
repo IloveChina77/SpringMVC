@@ -18,7 +18,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- 将自定义的 converter 放入ConversionServiceFactoryBean 中 -->
+    <!-- 将自定义的 converter [ 数据转换器 ] 放入ConversionServiceFactoryBean 中 -->
     <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters" >
            <set>
