@@ -34,4 +34,20 @@
 
     <mvc:annotation-driven conversion-service="conversionService"/>
 
+    <!-- 为了使用自定义拦截器 配置Interceptor -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>  <!-- 代表拦截所有controller -->
+                <!--<mvc:exclude-mapping path=""/>-->
+            <bean class="com.zr.company.interceptor.MyInterceptor"/>
+        </mvc:interceptor>
+        <!-- 配置第二个拦截器，多个以此类推 -->
+<!--
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path=""/>
+            <bean class="com.zr.company.interceptor.MyInterceptor2"/>
+        </mvc:interceptor>
+-->
+    </mvc:interceptors>
 </beans>
